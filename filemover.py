@@ -8,7 +8,7 @@
 
 
 from interface import Interface, implements
-from threading import Thread
+import threading
 import os
 import sys
 import shutil
@@ -18,6 +18,8 @@ import shutil
 
 
 class FileMoverObserver(Interface):
+    """Observer Interface for File Mover
+    Author: KvinTanaka"""
 
     def update(self, message) -> None:
         """Receive update from FileMover
@@ -71,7 +73,8 @@ class FileMover:
         self.running = True
         self.notify("File moving started")
 
-        self.do_file_move()
+        thread = threading.Thread(target=self.do_file_move)
+        thread.start()
 
     def stop(self):
         """Stop moving file from source to destination
