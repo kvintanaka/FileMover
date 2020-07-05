@@ -48,6 +48,9 @@ class FileMover:
         self.destination_path = destination_path
         self.observers = []
 
+        # Copying will start in another thread
+        self.thread = None
+
     def attach(self, observer: FileMoverObserver) -> None:
         """Attach an observer to the subject.
         Author: KvinTanaka"""
@@ -73,8 +76,8 @@ class FileMover:
         self.running = True
         self.notify("File moving started")
 
-        thread = threading.Thread(target=self.do_file_move)
-        thread.start()
+        self.thread = threading.Thread(target=self.do_file_move)
+        self.thread.start()
 
     def stop(self):
         """Stop moving file from source to destination
@@ -82,6 +85,8 @@ class FileMover:
 
         self.running = False
         self.notify("File moving stopped")
+
+        self.thread.join()
 
     @staticmethod
     def found_new_file(path):
