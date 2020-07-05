@@ -22,7 +22,7 @@ For Command-Line Interface
 ###### Example:
 > python filemover.py /home/temporary/files /home/not-temporary/files \
 or \
-> python filemover.py C:/temporary/files D:/not-temporary/files \
+> python filemover.py C:/temporary/files D:/not-temporary/files
 
 ## Hope this is useful for you internet! star this project if you think it is useful and thank you for the contribution.
 
