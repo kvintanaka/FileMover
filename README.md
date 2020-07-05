@@ -1,7 +1,7 @@
 # FileMover
 Graphical UI to move file continuously from a low-space source to a destination for storage 
-
-GUI Being build using PyQt5
+\
+GUI being build using PyQt5
 
 # Functionality
 * Continuously move file from source directory to destination directry
@@ -20,7 +20,7 @@ For Command-Line Interface
 > python filemover.py [source_directory] [destination_directory]
   
 ###### Example:
-> python filemover.py /home/temporary/files /home/not-temporary/files
+> python filemover.py /home/temporary/files /home/not-temporary/files \
 or
 > python filemover.py C:/temporary/files D:/not-temporary/files
 
