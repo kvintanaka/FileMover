@@ -1,10 +1,10 @@
 # FileMover
 Graphical UI to move file continuously from a low-space source to a destination for storage 
  \
-*GUI being build using PyQt5*
+*GUI being build using PyQt5 and PyQt Designer*
 
 # Functionality
-* Continuously move file from source directory to destination directry
+* Continuously move file from source directory to destination directory
 
 # Instruction
 For quick Python installation, you can go to:
