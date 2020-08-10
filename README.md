@@ -8,7 +8,7 @@ Graphical UI to move file continuously from a low-space source to a destination 
 
 # Instruction
 For quick Python installation, you can go to:
-https://kvintanaka.com/articles/quick-python-installation
+https://kvintanaka.com/#/articles/quick-python-installation
 
 Then, install the requirements
 > pip install -r requirements.txt
